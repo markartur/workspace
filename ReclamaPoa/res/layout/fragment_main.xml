@@ -18,19 +18,23 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/Button1"
-        android:onClick ="SendMessage" />
+        android:layout_marginBottom="111dp"
+        android:onClick="SendMessage"
+        android:text="@string/Button1" />
 
     <EditText
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button1"
+        android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="43dp"
+        android:layout_marginTop="89dp"
         android:ems="10"
-        android:inputType="textPostalAddress" />
+        android:inputType="textPostalAddress" >
+
+        <requestFocus />
+    </EditText>
 
 </RelativeLayout>
