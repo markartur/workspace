@@ -6,7 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.ger.reclamapoa.MainActivity$PlaceholderFragment" >
+    tools:context="com.ger.reclamapoa.MainActivity$PlaceholderFragment" 
+    android:background="#F78181">
 
     <TextView
         android:id="@+id/textView1"
@@ -45,5 +46,17 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="26dp"
         android:text="@string/LabelEmail" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/editText1"
+        android:baselineAlignBottom="true"
+        android:maxHeight="5dp"
+        android:maxWidth="5dp"
+        android:src="@drawable/main_menu" />
 
 </RelativeLayout>
