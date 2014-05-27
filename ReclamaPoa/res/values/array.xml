@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string-array name="spinnerItems">
+        <item>CAR Centro</item>
+        <item>CAR Norte</item>
+        <item>CAR Sul</item>
+        <item>CAR Leste</item>
+    </string-array>
+</resources>

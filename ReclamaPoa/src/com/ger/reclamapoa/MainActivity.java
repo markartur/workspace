@@ -9,6 +9,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.os.Build;
 
 public class MainActivity extends ActionBarActivity {
@@ -64,7 +66,24 @@ public class MainActivity extends ActionBarActivity {
 	}
 	
 	public void SendMessage(View view){
+		Spinner spinner = (Spinner)findViewById(R.id.spinner1);
+		String car = spinner.getSelectedItem().toString();
 		
+		TextView textview = (TextView)findViewById(R.id.textView2);
+		
+		
+		if(car.equals("CAR Sul")){
+			textview.setText("sul@car.gov.br");
+		}
+		if(car.equals("CAR Norte")){
+			textview.setText("norte@car.gov.br");
+		}
+		if(car.equals("CAR Centro")){
+			textview.setText("centro@car.gov.br");
+		}
+		if(car.equals("CAR Leste")){
+			textview.setText("leste@car.gov.br");
+		}
 	}
 
 }
