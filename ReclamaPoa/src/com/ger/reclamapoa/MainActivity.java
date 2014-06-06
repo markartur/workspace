@@ -3,6 +3,7 @@ package com.ger.reclamapoa;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.os.Build;
 
 public class MainActivity extends ActionBarActivity {
@@ -73,7 +75,16 @@ public class MainActivity extends ActionBarActivity {
 		
 		
 		if(car.equals("CAR Sul")){
-			textview.setText("sul@car.gov.br");
+			Intent i = new Intent(Intent.ACTION_SEND);
+			i.setType("message/rfc822");
+			i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"car@sul.gov.br"});
+			i.putExtra(Intent.EXTRA_SUBJECT, "Reclamação Sul");
+			i.putExtra(Intent.EXTRA_TEXT   , "Insira aqui sua reclamação");
+			try {
+			    startActivity(Intent.createChooser(i, "Send mail..."));
+			} catch (android.content.ActivityNotFoundException ex) {
+			    Toast.makeText(MainActivity.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+			}
 		}
 		if(car.equals("CAR Norte")){
 			textview.setText("norte@car.gov.br");
