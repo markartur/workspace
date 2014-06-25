@@ -15,16 +15,6 @@
         android:layout_height="wrap_content"
         android:text="@string/hello_world" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="111dp"
-        android:onClick="SendMessage"
-        android:text="@string/Button1" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -32,15 +22,37 @@
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="52dp"
-        android:text="@string/LabelEmail" />
+        android:text="" />
 
-    <Spinner
-        android:id="@+id/spinner1"
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignLeft="@+id/button1"
         android:layout_below="@+id/textView2"
-        android:layout_marginTop="49dp"
-        android:entries="@array/spinnerItems" />
+        android:layout_marginTop="51dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:onClick="SendMessage"
+        android:text="@string/Button1" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignRight="@+id/button1"
+        android:layout_below="@+id/button1"
+        android:layout_marginTop="36dp"
+        android:onClick="EnviarEmail"
+        android:text="Reclamar!" />
 
 </RelativeLayout>
