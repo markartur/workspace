@@ -132,7 +132,7 @@ public class MainActivity extends ActionBarActivity {
             	 for(CAR c:lista){
             		 lattemp = c.lat-MyLocationListener.latitude;
             		 lontemp = c.lon-MyLocationListener.longitude;
-            		 distanciatemp = lattemp+lontemp;
+            		 distanciatemp = Math.abs(lattemp)+Math.abs(lontemp);
             		 
             		 if(Math.abs(distanciatemp)<Math.abs(menordistancia)){
             			 menordistancia = distanciatemp;
